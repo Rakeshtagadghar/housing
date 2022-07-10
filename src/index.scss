@@ -1,8 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
 html,
 body {
-  // background: linear-gradient(to right, #3A6073, #16222A);
-  // min-height: 100vh;
   font-family: "Noto Sans", sans-serif;
 
   * {
@@ -11,35 +9,22 @@ body {
 }
 
 .movies {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-  //   align-items: center;
   list-style-type: none;
   padding: 2rem 0;
   margin: 0;
-  //   height: 100vh;
 }
 .rick {
   border-radius: 0.5rem;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column;
 }
 
 .movie {
-  flex: 0 1 30%;
   margin: 1rem;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   opacity: 1;
-  //   transform: translateY(60px);
   height: 300px;
   width: 300px;
-  //   @media all and (max-width: 900px) {
-  //     flex: 0 1 90%;
-  //     margin: 0.6rem;
-  //   }
-
   &__header {
     display: block;
     width: 100%;
@@ -55,49 +40,17 @@ body {
     }
 
     .f8 & {
-      //   background: url("http://www.hdwallpapers.in/download/the_fate_of_the_furious_2017_4k-2560x1440.jpg")
-      //     center no-repeat;
       background-size: cover;
-      //   background-repeat: no-repeat;
-      //   background-position: center;
     }
 
     .logan & {
-      //   background: url("http://blog.hdwallsource.com/wp-content/uploads/2017/08/monochrome-logan-movie-desktop-wallpaper-61664-63496-hd-wallpapers.jpg")
-      //     center no-repeat;
       background-size: cover;
     }
 
     .baby-driver & {
-      //   background: url("https://www.goombastomp.com/wp-content/uploads/2017/06/BabyDriverPodcast.jpg")
-      //     center no-repeat;
       background-size: cover;
     }
   }
-
-  //   &__overlay {
-  //     position: absolute;
-  //     z-index: 1;
-  //     top: 0;
-  //     left: 0;
-  //     right: 0;
-  //     bottom: 0;
-
-  //     .f8 & {
-  //       background: linear-gradient(to right, #859398, #283048);
-  //       opacity: 0.8;
-  //     }
-
-  //     .logan & {
-  //       background: linear-gradient(to right, #ffc500, #c21500);
-  //       opacity: 0.4;
-  //     }
-
-  //     .baby-driver & {
-  //       background: linear-gradient(to right, #753a88, #cc2b5e);
-  //       opacity: 0.6;
-  //     }
-  //   }
 
   &__title {
     position: absolute;

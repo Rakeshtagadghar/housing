@@ -3,7 +3,7 @@ import "./index.scss";
 
 const Cards = ({ data }) => {
   return (
-    <div className="col-sm-12 col-md-4">
+    <div className="col-sm-12 col-md-4 p-3">
       <div className="rick">
         <div
           className="movie f8 m-0"
