@@ -3,9 +3,15 @@ import styled from "styled-components";
 import Skeleton from "@mui/material/Skeleton";
 
 const StyledCard = styled.div`
-  border-radius: 0.5rem;
+  border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media (min-width: 1200px) and (max-width: 1700px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledName = styled.h2`
@@ -20,7 +26,18 @@ const StyledImage = styled.div`
   width: 300px;
   min-width: 300px;
   background-size: cover;
+  border-radius: 12px;
   background: transparent url(${(props) => props?.x.image}) no-repeat;
+  @media (max-width: 767px) {
+    background-size: cover;
+    height: 400px;
+    width: auto;
+  }
+  @media (min-width: 1200px) and (max-width: 1700px) {
+    background-size: cover;
+    height: 400px;
+    width: auto;
+  }
 `;
 
 const StyledID = styled.div`
