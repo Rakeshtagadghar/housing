@@ -37,7 +37,6 @@ export default function App() {
     }
   }, [getapi, page]);
 
-  console.log(chars);
   return (
     <div className="container-fluid">
       <Header />

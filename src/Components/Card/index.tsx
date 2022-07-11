@@ -25,7 +25,11 @@ const StyledName = styled.h2`
   font-family: fantasy, sans-serif;
 `;
 
-const StyledImage = styled.div`
+interface ImageProps {
+  data: any;
+}
+
+const StyledImage = styled.div<ImageProps>`
   margin: 0;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   opacity: 1;
