@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Skeleton from "@mui/material/Skeleton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFaceGrinWide,
+  faPerson,
+  faPersonDress,
+  faSkull,
+} from "@fortawesome/free-solid-svg-icons";
 
 const StyledCard = styled.div`
   border-radius: 12px;
@@ -27,7 +34,7 @@ const StyledImage = styled.div`
   min-width: 300px;
   background-size: cover;
   border-radius: 12px;
-  background: transparent url(${(props) => props?.x.image}) no-repeat;
+  background: transparent url(${(props: any) => props?.data.image}) no-repeat;
   @media (max-width: 767px) {
     background-size: cover;
     height: 400px;
@@ -57,7 +64,8 @@ const StyledBox = styled.div`
   position: relative;
 `;
 
-const Cards = ({ data, loading }) => {
+const Cards = (props: any) => {
+  const { data, loading } = props;
   return (
     <div className="col-sm-12 col-md-12 col-lg-6 col-xl-4 p-3">
       <StyledCard>
@@ -71,7 +79,7 @@ const Cards = ({ data, loading }) => {
           />
         ) : (
           <>
-            <StyledImage x={data}></StyledImage>
+            <StyledImage data={data}></StyledImage>
             <StyledBox className="p-2">
               <StyledID>
                 {" "}
@@ -82,18 +90,18 @@ const Cards = ({ data, loading }) => {
               <p className="mb-2">
                 {data?.species}{" "}
                 {data?.species === "Human" ? (
-                  <i className="fa-solid fa-face-grin-wide"></i>
+                  <FontAwesomeIcon icon={faFaceGrinWide} />
                 ) : (
-                  <i className="fa-solid fa-skull"></i>
+                  <FontAwesomeIcon icon={faSkull} />
                 )}{" "}
                 - {data?.status}
               </p>
               <p className="mb-2">
                 {data?.gender}{" "}
                 {data?.gender === "Male" ? (
-                  <i className=" fa-solid fa-person"></i>
+                  <FontAwesomeIcon icon={faPerson} />
                 ) : (
-                  <i className="fa-solid fa-person-dress"></i>
+                  <FontAwesomeIcon icon={faPersonDress} />
                 )}{" "}
               </p>
               <p className="mb-2">First apperance: {data?.origin?.name}</p>

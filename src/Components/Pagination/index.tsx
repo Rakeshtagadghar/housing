@@ -2,7 +2,8 @@ import React from "react";
 import Pagination from "@mui/material/Pagination";
 import Center from "../../Styles";
 
-const Pages = ({ page, handleChange, count }) => {
+const Pages = (props: any) => {
+  const { page, handleChange, count } = props;
   return (
     <Center>
       <Pagination count={count} page={page} onChange={handleChange} />

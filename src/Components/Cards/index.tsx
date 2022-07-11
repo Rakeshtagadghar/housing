@@ -8,12 +8,13 @@ const StyledCards = styled.div`
   margin: 0;
 `;
 
-const Cards = ({ data, loading }) => {
+const Cards = (props: any) => {
+  const { data, loading } = props;
   return (
     <StyledCards className="row">
       {data &&
         data?.results?.length > 0 &&
-        data?.results?.map((x) => {
+        data?.results?.map((x: any) => {
           return <Card data={x} key={x?.id} loading={loading} />;
         })}
     </StyledCards>

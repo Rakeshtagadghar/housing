@@ -7,17 +7,16 @@ import api from "../services/api";
 import "../index.scss";
 
 export default function App() {
-  const [getapi, setapi] = useState(null);
-  const [chars, setChars] = useState(null);
-  const [page, setPage] = React.useState(1);
-  const [loading, setLoading] = useState(false);
+  const [getapi, setapi] = useState<any>(null);
+  const [chars, setChars] = useState<any>(null);
+  const [page, setPage] = useState<number>(1);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const handleChange = (_, value) => {
+  const handleChange = (_: any, value: number) => {
     setPage(value);
     setLoading(true);
   };
 
-  console.log(api);
   useEffect(() => {
     setLoading(true);
     fetch(api)
