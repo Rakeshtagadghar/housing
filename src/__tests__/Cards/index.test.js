@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import Cards from "../../Components/Cards";
-import { testData } from "../Card";
+import { testData } from "../Card/index.test";
 
 test("shows null when data is not present", () => {
   const testMessage = "First apperance";
