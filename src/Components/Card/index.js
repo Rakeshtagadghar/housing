@@ -80,7 +80,7 @@ const Cards = ({ data, loading }) => {
 
               <StyledName className="ricxk-name">{data?.name}</StyledName>
               <p className="mb-2">
-                Species: {data?.species}{" "}
+                {data?.species}{" "}
                 {data?.species === "Human" ? (
                   <i className="fa-solid fa-face-grin-wide"></i>
                 ) : (
@@ -89,12 +89,12 @@ const Cards = ({ data, loading }) => {
                 - {data?.status}
               </p>
               <p className="mb-2">
-                Gender:{" "}
+                {data?.gender}{" "}
                 {data?.gender === "Male" ? (
                   <i className=" fa-solid fa-person"></i>
                 ) : (
                   <i className="fa-solid fa-person-dress"></i>
-                )}
+                )}{" "}
               </p>
               <p className="mb-2">First apperance: {data?.origin?.name}</p>
               <p className="mb-2">Last seen on: {data?.location?.name}</p>
