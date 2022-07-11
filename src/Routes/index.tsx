@@ -1,6 +1,6 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "../Pages/app";
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import Home from "../Pages/app"
 
 const Routing = () => {
   return (
@@ -9,7 +9,7 @@ const Routing = () => {
         <Route path="/" element={<Home />} />
       </Routes>
     </>
-  );
-};
+  )
+}
 
-export default Routing;
+export default Routing

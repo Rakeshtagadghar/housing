@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import Skeleton from "@mui/material/Skeleton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import styled from "styled-components"
+import Skeleton from "@mui/material/Skeleton"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFaceGrinWide,
   faPerson,
   faPersonDress,
   faSkull,
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
 
 const StyledCard = styled.div`
   border-radius: 12px;
@@ -19,14 +19,14 @@ const StyledCard = styled.div`
   @media (min-width: 1200px) and (max-width: 1700px) {
     flex-direction: column;
   }
-`;
+`
 
 const StyledName = styled.h2`
   font-family: fantasy, sans-serif;
-`;
+`
 
 interface ImageProps {
-  data: any;
+  data: any
 }
 
 const StyledImage = styled.div<ImageProps>`
@@ -49,7 +49,7 @@ const StyledImage = styled.div<ImageProps>`
     height: 400px;
     width: auto;
   }
-`;
+`
 
 const StyledID = styled.div`
   position: absolute;
@@ -61,15 +61,15 @@ const StyledID = styled.div`
     padding: 10px;
     font-size: 24px;
   }
-`;
+`
 
 const StyledBox = styled.div`
   width: fill-available;
   position: relative;
-`;
+`
 
 const Cards = (props: any) => {
-  const { data, loading } = props;
+  const { data, loading } = props
   return (
     <div className="col-sm-12 col-md-12 col-lg-6 col-xl-4 p-3">
       <StyledCard>
@@ -115,7 +115,7 @@ const Cards = (props: any) => {
         )}
       </StyledCard>
     </div>
-  );
-};
+  )
+}
 
-export default Cards;
+export default Cards

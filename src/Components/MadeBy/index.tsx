@@ -1,19 +1,19 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const StyledP = styled.p`
   font-family: fantasy, sans-serif;
   color: white;
   font-size: 20px;
-`;
+`
 const StyledA = styled.a`
   font-family: fantasy, sans-serif;
   color: white;
   font-size: 20px;
-  :hover{
+  :hover {
     color: white;
   }
-`;
+`
 const MadeBy = () => {
   return (
     <>
@@ -25,7 +25,7 @@ const MadeBy = () => {
         </StyledA>
       </StyledP>
     </>
-  );
-};
+  )
+}
 
-export default MadeBy;
+export default MadeBy

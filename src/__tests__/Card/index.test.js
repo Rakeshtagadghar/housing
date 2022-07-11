@@ -1,7 +1,8 @@
-import * as React from "react";
-import { render, screen } from "@testing-library/react";
-import Card from "../../Components/Card";
+import * as React from "react"
+import { render, screen } from "@testing-library/react"
+import Card from "../../Components/Card"
 
+// eslint-disable-next-line import/prefer-default-export
 export const testData = {
   info: {
     count: 826,
@@ -614,21 +615,21 @@ export const testData = {
       created: "2017-11-04T22:34:53.659Z",
     },
   ],
-};
+}
 test("shows loader when data is not present", () => {
-  const testMessage = "First apperance";
-  render(<Card data={null} loading={true} />);
+  const testMessage = "First apperance"
+  render(<Card data={null} loading />)
 
   // query* functions will return the element or null if it cannot be found
   // get* functions will return the element or throw an error if it cannot be found
-  expect(screen.queryByText(testMessage)).toBeNull();
-});
+  expect(screen.queryByText(testMessage)).toBeNull()
+})
 
 test("shows card when data is present", () => {
-  const testMessage = "First apperance";
-  render(<Card data={testData} loading={false} />);
+  const testMessage = "First apperance"
+  render(<Card data={testData} loading={false} />)
 
   // query* functions will return the element or null if it cannot be found
   // get* functions will return the element or throw an error if it cannot be found
-  expect(screen.queryByText(testMessage)).toBeNull();
-});
+  expect(screen.queryByText(testMessage)).toBeNull()
+})

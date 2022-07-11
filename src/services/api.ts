@@ -1,4 +1,4 @@
-const BASE_URL: string = "https://rickandmortyapi.com/api";
+const BASE_URL: string = "https://rickandmortyapi.com/api"
 //
 
-export default BASE_URL;
+export default BASE_URL

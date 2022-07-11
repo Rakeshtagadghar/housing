@@ -1,8 +1,8 @@
-import React, { StrictMode } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import React, { StrictMode } from "react"
+import ReactDOM from "react-dom"
+import { BrowserRouter } from "react-router-dom"
 
-import Routing from "./Routes";
+import Routing from "./Routes"
 
 ReactDOM.render(
   <StrictMode>
@@ -11,4 +11,4 @@ ReactDOM.render(
     </BrowserRouter>
   </StrictMode>,
   document.getElementById("root")
-);
+)
