@@ -1,15 +1,22 @@
 import React from "react";
+import styled from "styled-components";
 import Card from "../Card";
 
-const Cards = ({ data }) => {
+const StyledCards = styled.div`
+  list-style-type: none;
+  padding: 2rem 0;
+  margin: 0;
+`;
+
+const Cards = ({ data, loading }) => {
   return (
-    <div className="row mx-0 movies">
+    <StyledCards className="row">
       {data &&
         data?.results?.length > 0 &&
         data?.results?.map((x) => {
-          return <Card data={x} key={x?.id} />;
+          return <Card data={x} key={x?.id} loading={loading} />;
         })}
-    </div>
+    </StyledCards>
   );
 };
 
