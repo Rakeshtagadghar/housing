@@ -1,6 +1,6 @@
 import * as React from "react"
 import { render, screen } from "@testing-library/react"
-import Card from "../../Components/Card"
+import Card from "../../Components/Card/index.tsx"
 
 // eslint-disable-next-line import/prefer-default-export
 export const testData = {

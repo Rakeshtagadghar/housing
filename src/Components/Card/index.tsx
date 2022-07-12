@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Skeleton from "@mui/material/Skeleton"
+import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFaceGrinWide,
@@ -69,7 +70,8 @@ const StyledBox = styled.div`
 `
 
 const Cards = (props: any) => {
-  const { data, loading } = props
+  const navigate = useNavigate()
+  const { data, loading, getapi } = props
   return (
     <div className="col-sm-12 col-md-12 col-lg-6 col-xl-4 p-3">
       <StyledCard>
@@ -110,6 +112,13 @@ const Cards = (props: any) => {
               </p>
               <p className="mb-2">First apperance: {data?.origin?.name}</p>
               <p className="mb-2">Last seen on: {data?.location?.name}</p>
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={() => navigate("/character", { state: { data, getapi } })}
+              >
+                More info
+              </button>
             </StyledBox>
           </>
         )}

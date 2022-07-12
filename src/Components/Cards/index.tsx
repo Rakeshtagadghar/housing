@@ -9,13 +9,13 @@ const StyledCards = styled.div`
 `
 
 const Cards = (props: any) => {
-  const { data, loading } = props
+  const { data, loading, getapi } = props
   return (
     <StyledCards className="row">
       {data &&
         data?.results?.length > 0 &&
         data?.results?.map((x: any) => {
-          return <Card data={x} key={x?.id} loading={loading} />
+          return <Card data={x} key={x?.id} loading={loading} getapi={getapi} />
         })}
     </StyledCards>
   )

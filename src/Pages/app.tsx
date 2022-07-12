@@ -41,7 +41,7 @@ export default function App() {
     <div className="container-fluid">
       <Header />
       <Pages page={page} handleChange={handleChange} count={chars?.info?.pages} />
-      <Cards data={chars} loading={loading} />
+      <Cards data={chars} loading={loading} getapi={getapi} />
       <Pages page={page} handleChange={handleChange} count={chars?.info?.pages} />
       <MadeBy />
     </div>
